@@ -7,6 +7,7 @@ import CheckoutPage from '../pages/CheckoutPage';
 import InformationPage from '../pages/InformationPage';
 import PaymentPage from '../pages/PaymentPage';
 import SuccessPage from '../pages/SuccessPage';
+import ErrorPaymentPage from '../pages/ErrorPaymentPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
@@ -23,6 +24,7 @@ function AppRouter() {
             <Route path='/checkout/information' element={<InformationPage />} />
             <Route path='/checkout/payment' element={<PaymentPage />} />
             <Route path='/checkout/success' element={<SuccessPage />} />
+            <Route path='/checkout/payment_error' element={<ErrorPaymentPage />} />
             <Route path='/*' element={<NotFoundPage />} />
           </Routes>
         </Layout>
