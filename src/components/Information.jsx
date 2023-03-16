@@ -16,7 +16,7 @@ export default function Information() {
         const buyer = {
             "name": formData.get("name"),
             "email": formData.get("email"),
-            "addres": formData.get("addres"),
+            "address": formData.get("address"),
             "apto": formData.get("apto"),
             "city": formData.get("city"),
             "country": formData.get("country"),
@@ -40,7 +40,7 @@ export default function Information() {
                     <form ref={form}>
                         <input type="text" placeholder="Nombre completo" name="name" />
                         <input type="text" placeholder="Correo Electronico" name="email" />
-                        <input type="text" placeholder="Direccion" name="addres" />
+                        <input type="text" placeholder="Direccion" name="address" />
                         <input type="text" placeholder="Apto" name="apto" />
                         <input type="text" placeholder="Ciudad" name="city" />
                         <input type="text" placeholder="Pais" name="country" />
