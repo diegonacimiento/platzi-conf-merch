@@ -6,7 +6,7 @@ import '../styles/components/Payment.css';
 import AppContext from '../context/AppContext';
 
 export default function Payment() {
-    const { state: { cart, buyer }, addNewOrder } = useContext(AppContext);
+    const { state: { cart, buyer }, addNewOrder, removeAllCart } = useContext(AppContext);
 
     const navigate = useNavigate();
 
@@ -36,6 +36,7 @@ export default function Payment() {
                 };
                 // Agregamos la nueva orden en el state:
                 addNewOrder(newOrder);
+                removeAllCart();
                 // Si salió todo bien nos redirijimos a la página success:
                 navigate('/checkout/success');
             };

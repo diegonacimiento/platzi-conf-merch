@@ -21,7 +21,7 @@ export default function useInitialState() {
     function addToBuyer(payload) {
         setState({
             ...state,
-            buyer: [...state.buyer, payload],
+            buyer: [payload],
         });
     }
 
@@ -31,12 +31,20 @@ export default function useInitialState() {
             orders: [...state.orders, payload]
         });
     }
+
+    function removeAllCart() {
+        setState({
+            ...state,
+            cart: [],
+        })
+    }
     
     return {
         state,
         addToCart,
         removeToCart,
         addToBuyer,
-        addNewOrder
+        addNewOrder,
+        removeAllCart,
     };
 }
