@@ -13,3 +13,9 @@ body {
   display: grid;
   justify-content: center;
 }
+
+@media screen and (max-width: 850px) {
+  .Main {
+    grid-template-columns: minmax(auto, 95%);
+  }
+}

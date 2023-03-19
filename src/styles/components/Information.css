@@ -16,6 +16,10 @@
 .Information-back {
   margin: 10px 0 0 0;
 }
+.Information-back a {
+  text-decoration: underline;
+  color: #000;
+}
 .Information-item {
   display: flex;
   justify-content: space-between;
@@ -79,7 +83,7 @@ input {
   border: 1px solid #3866a3;
   display: inline-block;
   cursor: pointer;
-  color: #14396a;
+  color: #fff;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -89,4 +93,22 @@ input {
   width: 100%;
   display: block;
   outline: none;
+}
+.Information button:hover {
+  opacity: 0.75;
+}
+.Information button:active {
+  background: #468faf;
+  color: #5e5e5e;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 600px) {
+  .Information {
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+  }
+  .Information button:hover {
+    pointer-events: none;
+  }
 }

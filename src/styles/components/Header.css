@@ -19,3 +19,9 @@
   text-decoration: none;
   color: #33b1ff;
 }
+
+@media screen and (max-width: 600px) {
+  .Header-title a {
+    font-size: 26px;
+  }
+}

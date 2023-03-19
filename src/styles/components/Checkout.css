@@ -40,7 +40,7 @@
   border: 1px solid #3866a3;
   display: inline-block;
   cursor: pointer;
-  color: #14396a;
+  color: #fff;
   font-family: Arial;
   font-size: 15px;
   font-weight: bold;
@@ -52,6 +52,21 @@
   outline: none;
 }
 
+.Checkout-sidebar button:hover {
+  opacity: 0.75;
+}
+.Checkout-sidebar button:active {
+  background: #468faf;
+  color: #5e5e5e;
+  opacity: 0.75;
+}
+
 a {
   text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  .Checkout-sidebar button:hover {
+    pointer-events: none;
+  }
 }

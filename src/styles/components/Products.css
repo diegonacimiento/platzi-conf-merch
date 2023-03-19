@@ -1,17 +1,31 @@
 .Products-items {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 25px;
 }
 .Products-item {
-  text-decoration: none;
+  background-color: #e2eafc;
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
     1px 3px 8px rgba(39, 44, 49, 0.03);
   border-radius: 5px;
-  margin: 0 0 20px 0;
   position: relative;
+  height: 350px;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  transition: height 0.65s, width 0.65s, box-shadow 0.65s;
 }
+.Products-item:hover {
+  width: 290px;
+  height: 390px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.2),
+    1px 3px 8px rgba(39, 44, 49, 0.1);
+}
+.Products-item:hover > img {
+  height: 240px;
+} 
 .Products-item-info {
   padding: 10px;
 }
@@ -33,6 +47,7 @@
   height: 200px;
   border-radius: 5px 5px 0 0;
   object-fit: contain;
+  transition: height 0.65s;
 }
 .Products-item button {
   background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
@@ -44,7 +59,22 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 300;
+  color: #fff;
 }
 .Products-item button:hover {
-  background-color: rgba(39, 44, 49, 0.06);
+  opacity: 0.75;
+}
+.Products-item button:active {
+  background: #468faf;
+  color: #5e5e5e;
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 600px) {
+  .Products-items {
+    grid-template-columns: 1fr;
+  }
+  .Products-item button:hover {
+    pointer-events: none;
+  }
 }
