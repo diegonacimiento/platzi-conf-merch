@@ -109,6 +109,6 @@ input {
     grid-gap: 1rem;
   }
   .Information button:hover {
-    pointer-events: none;
+    opacity: 1;
   }
 }

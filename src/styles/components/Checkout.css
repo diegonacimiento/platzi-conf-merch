@@ -67,6 +67,6 @@ a {
 
 @media screen and (max-width: 600px) {
   .Checkout-sidebar button:hover {
-    pointer-events: none;
+    opacity: 1;
   }
 }

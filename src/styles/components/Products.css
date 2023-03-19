@@ -16,6 +16,7 @@
   text-align: center;
   text-decoration: none;
   transition: height 0.65s, width 0.65s, box-shadow 0.65s;
+  user-select: none;
 }
 .Products-item:hover {
   width: 290px;
@@ -75,6 +76,6 @@
     grid-template-columns: 1fr;
   }
   .Products-item button:hover {
-    pointer-events: none;
+    opacity: 1;
   }
 }
