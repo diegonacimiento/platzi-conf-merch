@@ -63,11 +63,11 @@
   opacity: 0.75;
 }
 
-.contador-div {
+.counter-div {
   margin: 15px 0;
 }
 
-.contador-div button {
+.counter-div button {
   width: 35px;
   padding: 5px;
   margin: 10px 15px;
@@ -76,7 +76,7 @@
   text-align: center;
 }
 
-.contador-div button i {
+.counter-div button i {
   margin: 0;
 }
 
@@ -86,11 +86,5 @@
   }
   .Products-item button:hover {
     opacity: 1;
-  }
-  .size-img-div figure {
-    width: 90%;
-  }
-  #bt-size-img {
-    left: 20px;
   }
 }

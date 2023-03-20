@@ -4,7 +4,7 @@ import '../styles/components/Information.css';
 import AppContext from '../context/AppContext';
 
 export default function Information() {
-    const { state: { cart }, addToBuyer } = useContext(AppContext);
+    const { addToBuyer } = useContext(AppContext);
 
     const navigate = useNavigate();
 
@@ -59,17 +59,6 @@ export default function Information() {
                         <button type='button' onClick={onSubmit}>Pagar</button>
                     </div>
                 </div>
-            </div>
-            <div className="Information-sidebar">
-                <h3>Pedido:</h3>
-                {cart.map(item => (
-                    <div className="Information-item" key={ item.id }>
-                        <div className="Information-element">
-                            <h4>{ item.title }</h4>
-                            <span>${ item.price }</span>
-                        </div>
-                    </div>
-                ))}
             </div>
         </div>
     )

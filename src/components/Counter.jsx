@@ -1,22 +1,22 @@
 import React from "react";
 
-export default function Contador({contador, setContador}) {
+export default function Counter({counter, setCounter}) {
 
     const sumar = () => {
-        setContador(contador + 1)
+        setCounter(counter + 1)
     }
 
     const restar = () => {
-        if (contador === 0 || contador < 0) {
-            setContador(0);
+        if (counter === 0 || counter < 0) {
+            setCounter(0);
         } else {
-            setContador(contador - 1)
+            setCounter(counter - 1)
         }
     }
 
     return (
-        <div className="contador-div">
-            <h3>Cantidad: {contador}</h3>
+        <div className="counter-div">
+            <h3>Cantidad: {counter}</h3>
             <button type="button" onClick={restar}> <i className="fa-solid fa-minus" title="Quitar un producto"> </i> </button>
             <button type="button" onClick={sumar}> <i className="fa-solid fa-plus" title='Agregar un producto' /> </button>
         </div>

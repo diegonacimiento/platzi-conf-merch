@@ -1,5 +1,5 @@
 .Information {
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   display: grid;
@@ -104,10 +104,6 @@ input {
 }
 
 @media screen and (max-width: 600px) {
-  .Information {
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 1rem;
-  }
   .Information button:hover {
     opacity: 1;
   }

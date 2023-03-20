@@ -1,18 +1,18 @@
 import React, { useRef, useState } from 'react';
-import Contador from './Contador';
+import Counter from './Counter';
 
 export default function TargetProduct({ product, handleAddToCart }) {
 
     const container = useRef();
     const [buttonView, setButtonView] = useState(false);
-    const [contador, setContador] = useState(0);
+    const [counter, setCounter] = useState(0);
 
     const handleAdd = () => {
         handleAddToCart({
             ...product,
-            amount: contador, 
+            amount: counter, 
         });
-        setContador(0);
+        setCounter(0);
         container.current.removeAttribute('style');
         setButtonView(false);
     }
@@ -50,7 +50,7 @@ export default function TargetProduct({ product, handleAddToCart }) {
             <button type='button' onClick={handleProduct}>{
                 !buttonView ? 'Ver' : 'Cerrar' 
             }</button>
-            <Contador contador={contador} setContador={setContador} />
+            <Counter counter={counter} setCounter={setCounter} />
             <button id='bt-size-img' type='button' onClick={handleAdd} >Agregar al carrito</button>
         </div>
 
