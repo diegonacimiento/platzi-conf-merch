@@ -41,14 +41,14 @@ export default function Payment() {
                 navigate('/checkout/success');
             };
         });
-        
+
         // Retornamos la respuesta (opcional)
         return response;
     }
 
     // Creamos una función que sume el total a pagar:
     const handleTotal = () => {
-        const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+        const reducer = (accumulator, currentValue) => accumulator + (currentValue.price * currentValue.amount);
         const total = cart.reduce(reducer, 0);
         return total;
     }
@@ -64,7 +64,7 @@ export default function Payment() {
                 },
             ],
         });
-        return response; 
+        return response;
     };
 
     return (

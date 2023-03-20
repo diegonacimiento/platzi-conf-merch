@@ -4,10 +4,10 @@ import '../styles/components/Checkout.css';
 import AppContext from '../context/AppContext';
 
 export default function Checkout() {
-  const { state: { cart }, removeToCart } = useContext(AppContext);
+  const { state: { cart }, removeToCart, addToCart } = useContext(AppContext);
 
   const handleTotal = () => {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.price;
+    const reducer = (accumulator, currentValue) => accumulator + (currentValue.price * currentValue.amount);
     const total = cart.reduce(reducer, 0);
     return total;
   }
@@ -16,18 +16,35 @@ export default function Checkout() {
     removeToCart(product);
   }
 
+  const handleAddToCart = product => () => {
+    addToCart({ ...product, amount: 1 });
+  }
+
   return (
     <div className="Checkout">
       <div className="Checkout-content">
-        <h3>{ cart.length > 0 ? "Lista de Pedidos:" : "El carrito está vacío." }</h3>
+        {cart.length > 0 ? (
+          <>
+            <h3>Lista de Pedidos:</h3>
+            <div className='Checkout-titles'>
+              <span>Producto</span>
+              <span>Cantidad</span>
+              <span>Precio</span>
+            </div>
+          </>
+        ) : <h3>El carrito está vacío.</h3>}
         {cart.map(item => (
           <div key={item.id} className="Checkout-item">
             <div className="Checkout-element">
               <h4>{item.title}</h4>
+              <span>{item.amount}</span>
               <span>${item.price}</span>
             </div>
-            <button type="button" onClick={ handleRemove(item) }>
+            <button type="button" onClick={handleRemove(item)}>
               <i className="fas fa-trash-alt" title='Eliminar' />
+            </button>
+            <button type="button" onClick={handleAddToCart(item)}>
+              <i className="fa-solid fa-plus" title='Agregar un producto más' />
             </button>
           </div>
         ))}

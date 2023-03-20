@@ -3,6 +3,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f7fff7;
   color: #3c484e;
   font-family: 'Open Sans', sans-serif;
 }
@@ -12,6 +13,7 @@ body {
   grid-template-columns: minmax(auto, 768px);
   display: grid;
   justify-content: center;
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 850px) {

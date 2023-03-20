@@ -1,12 +1,27 @@
 .Header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: #f7fff7;
+  justify-self: center;
+  padding: 10px;
+  height: 60px;
+  width: 768px;
+  z-index: 1000;
+}
+.Header h1 {
+  display: flex;
+  height: 40px;
+  margin: 0;
 }
 .Header-checkout {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   justify-items: center;
+  height: 40px;
   width: 30px;
   margin: 0 0 0 0.5em;
 }
@@ -21,6 +36,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .Header {
+    width: 90%;
+  }
   .Header-title a {
     font-size: 26px;
   }
