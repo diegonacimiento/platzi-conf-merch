@@ -5,14 +5,14 @@ export default function TargetProduct({ product, handleAddToCart }) {
 
     const container = useRef();
     const [buttonView, setButtonView] = useState(false);
-    const [counter, setCounter] = useState(0);
+    const [counter, setCounter] = useState(1);
 
     const handleAdd = () => {
         handleAddToCart({
             ...product,
             amount: counter, 
         });
-        setCounter(0);
+        setCounter(1);
         container.current.removeAttribute('style');
         setButtonView(false);
     }

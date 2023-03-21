@@ -7,8 +7,8 @@ export default function Counter({counter, setCounter}) {
     }
 
     const restar = () => {
-        if (counter === 0 || counter < 0) {
-            setCounter(0);
+        if (counter === 1 || counter < 1) {
+            setCounter(1);
         } else {
             setCounter(counter - 1)
         }
@@ -32,8 +32,3 @@ export default function Counter({counter, setCounter}) {
         </div>
     );
 }
-
-
-
-
-

@@ -25,7 +25,7 @@ export default function useValidateForm() {
     function validateEmail(email) {
         const expresionRegular = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6})*$/;
         if (!expresionRegular.test(email)) {
-            stateError = { ...stateError, email: 'El correo electrónico no es válido' };
+            stateError = { ...stateError, email: 'El correo electrónico no es válido.' };
             changeClassInput("email", true);
         } else {
             stateError = { ...stateError, email: "" };
@@ -36,7 +36,7 @@ export default function useValidateForm() {
     function validatePhone(phone) {
         const expresionRegular = /^\+(?:[0-9]●?){6,14}[0-9]$/;
         if (!expresionRegular.test(phone)) {
-            stateError = { ...stateError, phone: 'El número de teléfono no es válido' };
+            stateError = { ...stateError, phone: 'El número de teléfono no es válido.' };
             changeClassInput("phone", true);
         } else {
             stateError = { ...stateError, phone: "" };

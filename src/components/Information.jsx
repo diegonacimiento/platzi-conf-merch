@@ -48,9 +48,7 @@ export default function Information() {
                             required
                             type="text"
                             placeholder="Nombre completo" 
-                            name="name" 
-                            min={2} 
-                            max={50} 
+                            name="name"
                             defaultValue={buyer[0]?.name} 
                         />
                         <p className='error-inputs' style={{ color: "red" }}> {stateError.email}  </p>
@@ -105,7 +103,7 @@ export default function Information() {
                             className="myNumberInput" 
                             type="number" 
                             placeholder="Código postal" 
-                            name="cp" 
+                            name="cp"
                             defaultValue={buyer[0]?.cp} 
                         />
                         <p className='error-inputs' style={{ color: "red" }}>  {stateError.phone}  </p>

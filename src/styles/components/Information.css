@@ -74,7 +74,7 @@ input {
 }
 .invalid {
   background-color: #ffcccc;
-  border: 1px solid red;
+  border: 1px solid #E91E63;
 }
 .contain-input-phone {
   position: relative;
