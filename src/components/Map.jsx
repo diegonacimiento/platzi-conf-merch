@@ -9,10 +9,8 @@ const myIcon = new Icon({
     iconAnchor: [16, 32]
 });
 
-export default function Map({ location }) {
-    // Utilizamos el prop location y extraemos las propiedades lat y lon de location
-    // para asignarle al array position:
-    const position = [location?.data[0]?.lat, location?.data[0]?.lon]; 
+export default function Map({ location }) {    
+    const position = [location?.data[0]?.lat, location?.data[0]?.lon];
 
     return (
         <div className='leaflet-container'>
@@ -22,9 +20,7 @@ export default function Map({ location }) {
                 integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
                 crossOrigin=""
             />
-            {/* Preguntamos si hay location para mostrar el mapa: */}
-            {/* Y le pasamos position al atributo center de MapContainer y
-            también al atributo position de Marker */}
+            
             {location && (
                 <MapContainer center={position} zoom={16} scrollWheelZoom={false}>
                     <TileLayer

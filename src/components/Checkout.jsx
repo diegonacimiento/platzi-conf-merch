@@ -27,16 +27,16 @@ export default function Checkout() {
           <>
             <h3>Lista de Pedidos:</h3>
             <div className='Checkout-titles'>
-              <span>Producto</span>
-              <span>Cantidad</span>
-              <span>Precio</span>
+              <h4>Producto</h4>
+              <h4>Cantidad</h4>
+              <h4>Precio</h4>
             </div>
           </>
         ) : <h3>El carrito está vacío.</h3>}
         {cart.map(item => (
           <div key={item.id} className="Checkout-item">
             <div className="Checkout-element">
-              <h4>{item.title}</h4>
+              <span>{item.title}</span>
               <span>{item.amount}</span>
               <span>${item.price}</span>
             </div>

@@ -17,8 +17,18 @@ export default function Counter({counter, setCounter}) {
     return (
         <div className="counter-div">
             <h3>Cantidad: {counter}</h3>
-            <button type="button" onClick={restar}> <i className="fa-solid fa-minus" title="Quitar un producto"> </i> </button>
-            <button type="button" onClick={sumar}> <i className="fa-solid fa-plus" title='Agregar un producto' /> </button>
+            <button 
+                type="button" 
+                onClick={restar}
+            > 
+                <i className="fa-solid fa-minus" title="Quitar un producto" /> 
+            </button>
+            <button 
+                type="button" 
+                onClick={sumar}
+            > 
+                <i className="fa-solid fa-plus" title='Agregar un producto' /> 
+            </button>
         </div>
     );
 }

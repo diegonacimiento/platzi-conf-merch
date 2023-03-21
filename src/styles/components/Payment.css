@@ -20,13 +20,26 @@
   border: none;
   outline: none;
 }
-.Payment-element {
+.Payment-elements {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #eee;
 }
-.Payment-element h4, .Payment-element h3 {
-  margin: 0;
+.Payment-element{
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.Payment-titles h4, .Payment-titles h3, .Payment-element span {
+  margin: 5px;
+}
+.Payment-titles {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+  text-align: center;
+  width: 100%
 }

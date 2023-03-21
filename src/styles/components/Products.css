@@ -43,7 +43,7 @@
   transition: height 0.65s;
 }
 .Products-item button {
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background: linear-gradient(to bottom, #0089df 5%, #0089df 100%);
   width: 100%;
   padding: 10px;
   border-radius: 0px 0px 5px 5px;

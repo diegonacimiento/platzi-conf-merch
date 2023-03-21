@@ -72,12 +72,27 @@ input {
   width: 100%;
   box-sizing: border-box;
 }
+.invalid {
+  background-color: #ffcccc;
+  border: 1px solid red;
+}
+.contain-input-phone {
+  position: relative;
+}
+.contain-input-phone::before {
+  content: "+ ";
+  position: absolute;
+  top: 4px;
+  left: -15px;
+  color: black;
+  font-size: 20px;
+}
 .Information-buttons {
   margin: 10px 0 0;
 }
 .Information button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background: linear-gradient(to bottom, #0089df 5%, #0089df 100%);
   background-color: #63b8ee;
   border-radius: 6px;
   border: 1px solid #3866a3;
@@ -101,6 +116,16 @@ input {
   background: #468faf;
   color: #5e5e5e;
   opacity: 0.75;
+}
+.myNumberInput::-webkit-outer-spin-button,
+.myNumberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.error-inputs {
+  margin: 2px;
+  height: 15px;
+  line-height: 10px;
 }
 
 @media screen and (max-width: 600px) {

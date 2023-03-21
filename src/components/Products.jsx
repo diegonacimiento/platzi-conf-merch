@@ -16,9 +16,9 @@ export default function Products() {
                 {
                     products.map((product) => (
                         <TargetProduct 
-                        key={product.id} 
-                        product={product} 
-                        handleAddToCart={handleAddToCart} 
+                            key={product.id} 
+                            product={product} 
+                            handleAddToCart={handleAddToCart} 
                         />
                     ))
                 }

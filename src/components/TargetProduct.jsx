@@ -37,7 +37,8 @@ export default function TargetProduct({ product, handleAddToCart }) {
         <div className='Products-item' ref={container}>
             <img
                 src={product.image}
-                alt={product.title} />
+                alt={product.title} 
+            />
             <div className='Product-item-info'>
                 <h2>
                     {product.title}
@@ -47,11 +48,21 @@ export default function TargetProduct({ product, handleAddToCart }) {
                 </h2>
                 <p>{product.description}</p>
             </div>
-            <button type='button' onClick={handleProduct}>{
-                !buttonView ? 'Ver' : 'Cerrar' 
-            }</button>
+            <button 
+                type='button' 
+                onClick={handleProduct}
+            >
+                {
+                    !buttonView ? 'Agregar al carrito' : 'Cerrar' 
+                }
+            </button>
             <Counter counter={counter} setCounter={setCounter} />
-            <button id='bt-size-img' type='button' onClick={handleAdd} >Agregar al carrito</button>
+            <button 
+                type='button' 
+                onClick={handleAdd}
+            >
+                Agregar
+            </button>
         </div>
 
     )

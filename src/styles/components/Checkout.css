@@ -29,8 +29,8 @@
   width: 100%;
   border-bottom: 1px solid #eee;
 }
-.Checkout-element h4 {
-  margin: 0;
+.Checkout-titles h4, .Checkout-element span {
+  margin: 5px 0;
 }
 
 .Checkout-titles {
@@ -42,7 +42,7 @@
 
 .Checkout-sidebar button {
   box-shadow: inset 0px 1px 0px 0px #bee2f9;
-  background: linear-gradient(to bottom, #63b8ee 5%, #468ccf 100%);
+  background: linear-gradient(to bottom, #0089df 5%, #0089df 100%);
   background-color: #63b8ee;
   border-radius: 6px;
   border: 1px solid #3866a3;

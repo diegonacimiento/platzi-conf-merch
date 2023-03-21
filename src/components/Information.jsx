@@ -2,32 +2,37 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useContext, useRef } from 'react';
 import '../styles/components/Information.css';
 import AppContext from '../context/AppContext';
+import useValidateForm from '../hooks/useValidateForm';
 
 export default function Information() {
-    const { addToBuyer } = useContext(AppContext);
+    const { addToBuyer, state: { buyer } } = useContext(AppContext);
 
     const navigate = useNavigate();
 
     const form = useRef();
 
+    const { stateError, validationForm } = useValidateForm();
+
     const onSubmit = () => {
+        const matchForm = validationForm(form);
+
         const formData = new FormData(form.current);
-        
-        const buyer = {
+
+        const sendBuyer = {
             "name": formData.get("name"),
             "email": formData.get("email"),
             "address": formData.get("address"),
-            "apto": formData.get("apto"),
+            "dpto": formData.get("dpto"),
             "city": formData.get("city"),
-            "country": formData.get("country"),
             "state": formData.get("state"),
+            "country": formData.get("country"),
             "cp": formData.get("cp"),
             "phone": formData.get("phone"),
         };
 
-        addToBuyer(buyer);
+        addToBuyer(sendBuyer);
 
-        navigate('/checkout/payment');
+        if (matchForm) navigate('/checkout/payment');
     }
 
     return (
@@ -37,16 +42,80 @@ export default function Information() {
                     <h2>Información de contacto:</h2>
                 </div>
                 <div className="Information-form">
-                    <form ref={form}>
-                        <input type="text" placeholder="Nombre completo" name="name" />
-                        <input type="text" placeholder="Correo Electronico" name="email" />
-                        <input type="text" placeholder="Direccion" name="address" />
-                        <input type="text" placeholder="Apto" name="apto" />
-                        <input type="text" placeholder="Ciudad" name="city" />
-                        <input type="text" placeholder="Pais" name="country" />
-                        <input type="text" placeholder="Estado" name="state" />
-                        <input type="number" placeholder="Codigo postal" name="cp" />
-                        <input type="number" placeholder="Telefono" name="phone" />
+                    <form ref={form} id="my-form">
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.name}  </p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="Nombre completo" 
+                            name="name" 
+                            min={2} 
+                            max={50} 
+                            defaultValue={buyer[0]?.name} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.email}  </p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="Correo electrónico" 
+                            name="email" 
+                            defaultValue={buyer[0]?.email} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.address} </p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="Dirección" 
+                            name="address" 
+                            defaultValue={buyer[0]?.address} 
+                        />
+                        <p className='error-inputs'> </p>
+                        <input type="text"
+                            placeholder="N° de departamento" 
+                            name="dpto" 
+                            defaultValue={buyer[0]?.dpto} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.city} </p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="Ciudad o municipio" 
+                            name="city" 
+                            defaultValue={buyer[0]?.city} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.state} </p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="Provincia o estado" 
+                            name="state" 
+                            defaultValue={buyer[0]?.state} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.country}</p>
+                        <input
+                            required
+                            type="text"
+                            placeholder="País" 
+                            name="country" 
+                            defaultValue={buyer[0]?.country} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}> {stateError.cp} </p>
+                        <input
+                            required
+                            className="myNumberInput" 
+                            type="number" 
+                            placeholder="Código postal" 
+                            name="cp" 
+                            defaultValue={buyer[0]?.cp} 
+                        />
+                        <p className='error-inputs' style={{ color: "red" }}>  {stateError.phone}  </p>
+                        <input required 
+                            className="myNumberInput" 
+                            type="text" 
+                            placeholder="Teléfono" 
+                            name="phone" 
+                            defaultValue={buyer[0]?.phone} 
+                        />
                     </form>
                 </div>
                 <div className="Information-buttons">
@@ -60,6 +129,6 @@ export default function Information() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
