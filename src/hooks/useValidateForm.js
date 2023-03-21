@@ -101,13 +101,13 @@ export default function useValidateForm() {
         } else {
             validatePhone(formData.get("phone"));  
         }
-        const errorsInput = Object.values(stateError);
+        const errorsOfInputs = Object.values(stateError);
 
-        const matchErrorForm = errorsInput.some(item => item !== "");
+        const errorsInForm = errorsOfInputs.some(item => item !== "");
 
-        const matchForm = !matchErrorForm;
+        const formValid = !errorsInForm;
 
-        return matchForm;
+        return formValid;
     }
 
     return {
