@@ -43,7 +43,7 @@ export default function Information() {
                 </div>
                 <div className="Information-form">
                     <form ref={form} id="my-form">
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.name}  </p>
+                        <p className='error-inputs'> {stateError.name}  </p>
                         <input
                             required
                             type="text"
@@ -51,7 +51,7 @@ export default function Information() {
                             name="name"
                             defaultValue={buyer[0]?.name} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.email}  </p>
+                        <p className='error-inputs'> {stateError.email}  </p>
                         <input
                             required
                             type="text"
@@ -59,7 +59,7 @@ export default function Information() {
                             name="email" 
                             defaultValue={buyer[0]?.email} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.address} </p>
+                        <p className='error-inputs'> {stateError.address} </p>
                         <input
                             required
                             type="text"
@@ -73,7 +73,7 @@ export default function Information() {
                             name="dpto" 
                             defaultValue={buyer[0]?.dpto} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.city} </p>
+                        <p className='error-inputs'> {stateError.city} </p>
                         <input
                             required
                             type="text"
@@ -81,7 +81,7 @@ export default function Information() {
                             name="city" 
                             defaultValue={buyer[0]?.city} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.state} </p>
+                        <p className='error-inputs'> {stateError.state} </p>
                         <input
                             required
                             type="text"
@@ -89,7 +89,7 @@ export default function Information() {
                             name="state" 
                             defaultValue={buyer[0]?.state} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.country}</p>
+                        <p className='error-inputs'> {stateError.country}</p>
                         <input
                             required
                             type="text"
@@ -97,7 +97,7 @@ export default function Information() {
                             name="country" 
                             defaultValue={buyer[0]?.country} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}> {stateError.cp} </p>
+                        <p className='error-inputs'> {stateError.cp} </p>
                         <input
                             required
                             className="myNumberInput" 
@@ -106,7 +106,7 @@ export default function Information() {
                             name="cp"
                             defaultValue={buyer[0]?.cp} 
                         />
-                        <p className='error-inputs' style={{ color: "red" }}>  {stateError.phone}  </p>
+                        <p className='error-inputs'>  {stateError.phone}  </p>
                         <input required 
                             className="myNumberInput" 
                             type="text" 

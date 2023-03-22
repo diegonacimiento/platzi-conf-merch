@@ -4,12 +4,13 @@
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: #f7fff7;
+  background: var(--background);
   justify-self: center;
   padding: 10px;
   height: 60px;
   width: 768px;
   z-index: 1000;
+  transition: background 0.5s;
 }
 .Header h1 {
   display: flex;
@@ -18,12 +19,16 @@
 }
 .Header-checkout {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   justify-items: center;
   height: 40px;
-  width: 30px;
+  width: 60px;
   margin: 0 0 0 0.5em;
+}
+.Header-checkout span {
+  display: flex;
+  align-items: center;
 }
 .Header-alert {
   color: #33b13a;
@@ -32,6 +37,14 @@
 }
 .Header a {
   text-decoration: none;
+  color: #0089df;
+}
+.bt-mode {
+  background: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  font-size: 16px;
   color: #0089df;
 }
 

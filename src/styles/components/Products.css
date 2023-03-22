@@ -6,7 +6,7 @@
   gap: 25px;
 }
 .Products-item {
-  background-color: #e2eafc;
+  background: var(--bk-prod-item);
   box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
     1px 3px 8px rgba(39, 44, 49, 0.03);
   border-radius: 5px;
@@ -16,7 +16,7 @@
   overflow: hidden;
   text-align: center;
   text-decoration: none;
-  transition: height 0.65s, width 0.65s, box-shadow 0.65s;
+  transition:  background 0.5s, height 0.65s, width 0.65s, box-shadow 0.65s;
   user-select: none;
 }
 .Products-item-info {

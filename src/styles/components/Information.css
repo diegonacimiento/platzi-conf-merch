@@ -18,7 +18,8 @@
 }
 .Information-back a {
   text-decoration: underline;
-  color: #000;
+  color: var(--color);
+  transition: color 0.5s;
 }
 .Information-item {
   display: flex;
@@ -55,11 +56,11 @@ h3 {
   padding: 0;
 }
 input {
-  background-color: #fff;
+  background-color: transparent;
   background-image: none;
   border-radius: 4px;
-  border: 1px solid #d9d9d9;
-  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid #b6b6b6;
+  color: var(--color);
   display: inline-block;
   font-feature-settings: 'tnum';
   font-size: 14px;
@@ -73,19 +74,8 @@ input {
   box-sizing: border-box;
 }
 .invalid {
-  background-color: #ffcccc;
-  border: 1px solid #E91E63;
-}
-.contain-input-phone {
-  position: relative;
-}
-.contain-input-phone::before {
-  content: "+ ";
-  position: absolute;
-  top: 4px;
-  left: -15px;
-  color: black;
-  font-size: 20px;
+  background-color: #db020238;
+  border: 2px solid #FF0000;
 }
 .Information-buttons {
   margin: 10px 0 0;
@@ -126,6 +116,7 @@ input {
   margin: 2px;
   height: 15px;
   line-height: 10px;
+  color: #FF0000;
 }
 
 @media screen and (max-width: 600px) {

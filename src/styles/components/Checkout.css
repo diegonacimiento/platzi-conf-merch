@@ -13,8 +13,9 @@
 }
 .Checkout-item .fas, .Checkout-item .fa-plus {
   margin: 0 0 0 7px;
-  color: rgba(0, 0, 0, 0.4);
+  color: var(--color);
   cursor: pointer;
+  transition: color 0.5s;
 }
 .Checkout-item button {
   background-color: transparent;

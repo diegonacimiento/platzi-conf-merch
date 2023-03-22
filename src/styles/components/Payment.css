@@ -43,3 +43,7 @@
   text-align: center;
   width: 100%
 }
+.Payment-button div {
+  display: flex;
+  justify-content: center;
+}

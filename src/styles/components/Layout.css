@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 
+:root {
+  --background: #f7fff7;
+  --color: #000814;
+  --bk-prod-item: #e2eafc;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7fff7;
-  color: #3c484e;
+  background-color: var(--background);
+  color: var(--color);
   font-family: 'Open Sans', sans-serif;
+  transition: background 0.5s, color 0.5s;
 }
 
 .Main {

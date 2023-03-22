@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function ErrorPayment() {
     const linkStyle = {
         fontSize: '20px',
-        color: '#000',
+        color: 'var(--color)',
         textDecoration: 'underline',
     }
     return (
