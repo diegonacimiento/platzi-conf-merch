@@ -1,5 +1,8 @@
 .Success {
   margin: 0 0 4em 0;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
 }
 .Success-map {
   margin: 10px 0 0 0;

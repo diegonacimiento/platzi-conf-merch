@@ -16,15 +16,15 @@ body {
 }
 
 .Main {
-  padding: 10px;
-  grid-template-columns: minmax(auto, 768px);
+  padding: 10px 0;
+  grid-template-columns: minmax(auto, 90%);
   display: grid;
   justify-content: center;
   margin-top: 80px;
 }
 
 @media screen and (max-width: 850px) {
-  .Main {
+  /* .Main {
     grid-template-columns: minmax(auto, 95%);
-  }
+  } */
 }

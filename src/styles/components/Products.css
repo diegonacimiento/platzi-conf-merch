@@ -1,6 +1,6 @@
 .Products-items {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
   gap: 25px;
@@ -78,6 +78,12 @@
 
 .counter-div button i {
   margin: 0;
+}
+
+@media screen and (max-width: 905px) {
+  .Products-items {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 600px) {

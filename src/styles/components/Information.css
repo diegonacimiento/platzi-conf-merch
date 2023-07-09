@@ -1,8 +1,9 @@
 .Information {
-  grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: minmax(150px, 550px);
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
-  display: grid;
+  justify-content: center;
   margin: 0 0 4em 0;
 }
 .Information-buttons {
