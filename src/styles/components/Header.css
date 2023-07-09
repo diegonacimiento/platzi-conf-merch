@@ -9,7 +9,7 @@
   padding: 10px 0;
   height: 60px;
   width: 90%;
-  z-index: 1000;
+  z-index: 10000;
   transition: background 0.5s;
 }
 .Header h1 {
