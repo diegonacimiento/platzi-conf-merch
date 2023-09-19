@@ -10,6 +10,7 @@ import ErrorPaymentPage from '../pages/ErrorPaymentPage';
 import NotFoundPage from '../pages/NotFoundPage';
 import AppContext from '../context/AppContext';
 import useInitialState from '../hooks/useInitialState';
+import ProductPage from '../pages/ProductPage';
 
 function AppRouter() {
   const initialState = useInitialState();
@@ -19,6 +20,7 @@ function AppRouter() {
         <Layout>
           <Routes>
             <Route path='/' element={<HomePage />} />
+            <Route path="/product/:id" element={<ProductPage />} />
             <Route path='/checkout' element={<CheckoutPage />} />
             <Route path='/checkout/information' element={<InformationPage />} />
             <Route path='/checkout/payment' element={<PaymentPage />} />
