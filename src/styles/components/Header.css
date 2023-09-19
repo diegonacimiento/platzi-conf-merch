@@ -36,10 +36,13 @@
   margin-left: 5px;
 }
 .Header a {
+  height: 22px;
   text-decoration: none;
   color: #0089df;
 }
 .bt-mode {
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   height: 22px;
