@@ -46,10 +46,13 @@ export default function DetailsProduct() {
       </figure>
       <h3>$ {product.price}</h3>
       <p>{product.description}</p>
-      <Counter counter={counter} setCounter={setCounter} />
-      <button type="button" onClick={handleAdd} className='bt-add-product'>
-        Agregar al carrito
-      </button>
+      <div className='container-buy'>
+        <h3>Comprar</h3>
+        <Counter counter={counter} setCounter={setCounter} />
+        <button type="button" onClick={handleAdd} className="bt-add-product">
+          Agregar al carrito
+        </button>
+      </div>
     </div>
   );
 }

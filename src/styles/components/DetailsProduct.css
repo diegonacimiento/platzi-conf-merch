@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
   height: 100%;
-  width: 100%;
+  width: 90%;
 }
 
 .container-product button {
@@ -47,6 +48,25 @@
   text-align: center;
 }
 
+.container-buy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bk-prod-item);
+  border-radius: 10px;
+  margin: 10px;
+  min-width: 250px;
+}
+
+.container-buy h3 {
+  font-size: 18px;
+}
+
+.container-buy > * {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
 .counter-div {
   display: flex;
   margin: 15px 0;
@@ -56,11 +76,11 @@
   display: flex;
   align-items: center;
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .counter-div button {
-  padding: 8px;
+  padding: 4px;
   margin: 0px 15px;
   border-radius: 5px;
   font-size: 16px;

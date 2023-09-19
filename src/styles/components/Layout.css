@@ -12,7 +12,7 @@ body {
   background-color: var(--background);
   color: var(--color);
   font-family: 'Open Sans', sans-serif;
-  transition: background 0.5s, color 0.5s;
+  transition: background 0.35s, color 0.35s;
 }
 
 .Main {
@@ -20,5 +20,5 @@ body {
   grid-template-columns: minmax(auto, 90%);
   display: grid;
   justify-content: center;
-  margin-top: 80px;
+  row-gap: 15px;
 }
