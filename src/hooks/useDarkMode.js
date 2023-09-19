@@ -11,7 +11,7 @@ if(!localStorage.getItem("darkMode")) {
 export default function useDarkMode() {
     const [isActiveDarkMode, setIsActiveDarkMode] = useState(JSON.parse(localStorage.getItem("darkMode")));
     
-    const style = document.documentElement.style;
+    const {style} = document.documentElement;
 
     if(isActiveDarkMode) {
         localStorage.setItem("darkMode", "true");

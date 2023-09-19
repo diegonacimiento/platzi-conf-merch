@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import AppContext from '../context/AppContext';
 import Counter from './Counter';
-import '../styles/components/Product.css';
+import '../styles/components/DetailsProduct.css';
 
 export default function DetailsProduct() {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ export default function DetailsProduct() {
   };
 
   return (
-    <div className="container-product">
+    <div className="container-product" data-aos="zoom-in">
       <button title="Volver hacia atrás" type="button" onClick={handleBack}>
         <i className="fa-solid fa-arrow-left" style={{ color: '#ffffff;' }} />{' '}
         Volver

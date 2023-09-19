@@ -60,9 +60,7 @@
 }
 
 .counter-div button {
-  height: 30px;
-  width: 30px;
-  padding: 0;
+  padding: 8px;
   margin: 0px 15px;
   border-radius: 5px;
   font-size: 16px;
@@ -74,5 +72,6 @@
 
 .container-product .bt-add-product {
   align-self: center;
+  padding: 12px;
   margin: 15px 0;
 }

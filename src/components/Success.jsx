@@ -12,7 +12,7 @@ export default function Success() {
     const location = useGeolocation(fullAddress);
 
     return (
-        <div className="Success">
+        <div className="Success" data-aos="fade-down-right">
             <div className="Success-content">
                 <h2>¡{buyer[0]?.name}, gracias por tu compra!</h2>
                 <span>Tu pedido llegara en 3 dias a la dirección de:</span>

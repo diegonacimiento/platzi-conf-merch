@@ -57,7 +57,7 @@ export default function Payment() {
     };
 
     return (
-        <div className="Payment">
+        <div className="Payment" data-aos="flip-down">
             <div className="Payment-content">
 
                 {cart.length > 0 && (

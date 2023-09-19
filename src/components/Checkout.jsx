@@ -21,7 +21,7 @@ export default function Checkout() {
   }
 
   return (
-    <div className="Checkout">
+    <div className="Checkout" data-aos="flip-left">
       <div className="Checkout-content">
         {cart.length > 0 ? (
           <>

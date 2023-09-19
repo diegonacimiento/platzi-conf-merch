@@ -7,7 +7,7 @@ export default function Products() {
     const { state: { products } } = useContext(AppContext);
 
     return (
-        <div className='Products'>
+        <div className='Products' data-aos="fade-down">
             <div className='Products-items'>
                 {
                     products.map((product) => (

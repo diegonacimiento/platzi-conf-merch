@@ -36,7 +36,7 @@ export default function Information() {
     }
 
     return (
-        <div className="Information">
+        <div className="Information" data-aos="zoom-in-right">
             <div className="Information-content">
                 <div className="Information-head">
                     <h2>Información de contacto:</h2>

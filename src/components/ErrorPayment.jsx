@@ -8,7 +8,7 @@ export default function ErrorPayment() {
         textDecoration: 'underline',
     }
     return (
-        <div>
+        <div data-aos="fade-down-right">
             <h1>Error en el pago</h1>
             <p>
                 Lo sentimos, ha ocurrido algún error con el pago. 
