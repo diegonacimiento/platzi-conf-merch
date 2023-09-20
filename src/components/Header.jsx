@@ -28,7 +28,12 @@ export default function Header() {
 
   return (
     <div className="Header">
-      <button title="Ir a inicio" type="button" onClick={handleHome} className='Header-bt-icon'>
+      <button
+        title="Ir a inicio"
+        type="button"
+        onClick={handleHome}
+        className="Header-bt-icon"
+      >
         <div className="Header-container-icon">
           <img
             className="Header-icon"

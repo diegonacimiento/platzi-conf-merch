@@ -19,14 +19,17 @@ function AppRouter() {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/product/:id" element={<ProductPage />} />
-            <Route path='/checkout' element={<CheckoutPage />} />
-            <Route path='/checkout/information' element={<InformationPage />} />
-            <Route path='/checkout/payment' element={<PaymentPage />} />
-            <Route path='/checkout/success' element={<SuccessPage />} />
-            <Route path='/checkout/payment_error' element={<ErrorPaymentPage />} />
-            <Route path='/*' element={<NotFoundPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
+            <Route path="/checkout/information" element={<InformationPage />} />
+            <Route path="/checkout/payment" element={<PaymentPage />} />
+            <Route path="/checkout/success" element={<SuccessPage />} />
+            <Route
+              path="/checkout/payment_error"
+              element={<ErrorPaymentPage />}
+            />
+            <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </Layout>
       </BrowserRouter>

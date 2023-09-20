@@ -19,12 +19,12 @@ export default function DetailsProduct() {
     state: { products },
     addToCart,
   } = useContext(AppContext);
-  
+
   const product = products.filter((item) => item.id === id.toString())[0];
 
   const handleRedirectCart = () => {
-    navigate("/checkout");
-  }
+    navigate('/checkout');
+  };
 
   const handleBack = () => {
     navigate(-1);
@@ -82,7 +82,11 @@ export default function DetailsProduct() {
       <div className="msg-added" ref={msgAdded}>
         <p>Agregado al carrito</p>
         <i className="fa-solid fa-check" />
-        <button title="Ir al carrito" type="button" onClick={handleRedirectCart}>
+        <button
+          title="Ir al carrito"
+          type="button"
+          onClick={handleRedirectCart}
+        >
           Ir al carrito
         </button>
         <p> ¿Quiere comprar más productos?</p>

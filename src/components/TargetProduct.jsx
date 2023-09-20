@@ -8,7 +8,7 @@ export default function TargetProduct({ product }) {
 
   const handleProduct = () => {
     navigate(`/product/${product.id}`);
-  }
+  };
 
   return (
     <div className="Products-item" ref={container}>
@@ -22,7 +22,6 @@ export default function TargetProduct({ product }) {
       <button type="button" onClick={handleProduct}>
         Ver producto
       </button>
-      
     </div>
   );
 }

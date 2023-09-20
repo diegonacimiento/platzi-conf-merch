@@ -6,5 +6,5 @@ import AppRouter from './routes/App.router';
 AOS.init();
 
 export default function App() {
-    return <AppRouter />;
+  return <AppRouter />;
 }
