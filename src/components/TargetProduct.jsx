@@ -19,7 +19,7 @@ export default function TargetProduct({ product }) {
           <span> ${product.price}</span>
         </h2>
       </div>
-      <button type="button" onClick={handleProduct}>
+      <button type="button" onClick={handleProduct} title="Ver producto">
         Ver producto
       </button>
     </div>

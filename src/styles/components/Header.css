@@ -25,14 +25,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
-  width: 70px;
   margin: 0 0 0 0.5em;
+}
+.Header-checkout > * {
+  padding: 15px;
 }
 .Header-checkout span {
   display: flex;
   align-items: center;
-  width: 30px;
 }
 .Header-alert {
   color: #33b13a;
@@ -49,8 +49,6 @@
   align-items: center;
   background: none;
   border: none;
-  height: 22px;
-  width: 30px;
   color: #0089df;
 }
 .bt-mode i {

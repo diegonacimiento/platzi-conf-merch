@@ -103,7 +103,12 @@ export default function DetailsProduct() {
       <div className="container-buy" ref={containerBuy}>
         <h3>Cantidad</h3>
         <Counter counter={counter} setCounter={setCounter} />
-        <button type="button" onClick={handleAdd} className="bt-add-product">
+        <button
+          type="button"
+          onClick={handleAdd}
+          className="bt-add-product"
+          title="Agregar al carrito"
+        >
           Agregar al carrito
         </button>
       </div>

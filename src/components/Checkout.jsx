@@ -47,11 +47,19 @@ export default function Checkout() {
               <span>{item.amount}</span>
               <span>${item.price}</span>
             </div>
-            <button type="button" onClick={handleRemove(item)}>
+            <button
+              type="button"
+              onClick={handleRemove(item)}
+              title="Eliminar un producto"
+            >
               <i className="fas fa-trash-alt" title="Eliminar" />
             </button>
-            <button type="button" onClick={handleAddToCart(item)}>
-              <i className="fa-solid fa-plus" title="Agregar un producto más" />
+            <button
+              type="button"
+              onClick={handleAddToCart(item)}
+              title="Agregar un producto"
+            >
+              <i className="fa-solid fa-plus" />
             </button>
           </div>
         ))}
@@ -60,7 +68,9 @@ export default function Checkout() {
         <div className="Checkout-sidebar">
           <h3>Precio Total: ${handleTotal()}</h3>
           <Link to="/checkout/information">
-            <button type="button">Continuar pedido</button>
+            <button type="button" title="Continuar pedido">
+              Continuar pedido
+            </button>
           </Link>
         </div>
       )}

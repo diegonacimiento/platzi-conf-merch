@@ -15,12 +15,12 @@ export default function Counter({ counter, setCounter }) {
 
   return (
     <div className="counter-div">
-      <button type="button" onClick={restar}>
-        <i className="fa-solid fa-minus" title="Quitar un producto" />
+      <button type="button" onClick={restar} title="Quitar un producto">
+        <i className="fa-solid fa-minus" />
       </button>
       <h3>{counter}</h3>
-      <button type="button" onClick={sumar}>
-        <i className="fa-solid fa-plus" title="Agregar un producto" />
+      <button type="button" onClick={sumar} title="Agregar un producto">
+        <i className="fa-solid fa-plus" />
       </button>
     </div>
   );

@@ -37,13 +37,13 @@ export default function Header() {
         <div className="Header-container-icon">
           <img
             className="Header-icon"
-            src="https://i.imgur.com/ZAGT9Ka.png"
+            src="https://i.imgur.com/E9KmIHz.png"
             alt="Platzi Conf Merch"
           />
         </div>
       </button>
       <div className="Header-checkout">
-        <button className="bt-mode" type="button" onClick={changeMode}>
+        <button title='Cambiar tema' className="bt-mode" type="button" onClick={changeMode}>
           {isActiveDarkMode ? (
             <i className="fa-solid fa-moon" />
           ) : (
