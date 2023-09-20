@@ -18,7 +18,7 @@ export default function Counter({ counter, setCounter }) {
       <button type="button" onClick={restar}>
         <i className="fa-solid fa-minus" title="Quitar un producto" />
       </button>
-      <h3>Cantidad: {counter}</h3>
+      <h3>{counter}</h3>
       <button type="button" onClick={sumar}>
         <i className="fa-solid fa-plus" title="Agregar un producto" />
       </button>
