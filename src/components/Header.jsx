@@ -43,7 +43,12 @@ export default function Header() {
         </div>
       </button>
       <div className="Header-checkout">
-        <button title='Cambiar tema' className="bt-mode" type="button" onClick={changeMode}>
+        <button
+          title="Cambiar tema"
+          className="bt-mode"
+          type="button"
+          onClick={changeMode}
+        >
           {isActiveDarkMode ? (
             <i className="fa-solid fa-moon" />
           ) : (

@@ -126,7 +126,7 @@ export default function Information() {
             <Link to="/checkout">Regresar</Link>
           </div>
           <div className="Information-next">
-            <button type="button" onClick={onSubmit} title='Pagar'>
+            <button type="button" onClick={onSubmit} title="Pagar">
               Pagar
             </button>
           </div>
