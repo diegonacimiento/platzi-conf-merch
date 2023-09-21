@@ -16,9 +16,66 @@ body {
 }
 
 .Main {
+  position: fixed;
   padding: 10px 0;
   grid-template-columns: minmax(auto, 90%);
   display: grid;
   justify-content: center;
   row-gap: 15px;
+}
+
+#splash {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background-color: #000814;
+  height: 100%;
+  width: 100%;
+}
+
+#splash h1 {
+  opacity: 0;
+  font-size: 50px;
+  animation-name: splash;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  color: #97ca3f;
+}
+
+@keyframes splash {
+  0% {
+    transform: scale(0.40);
+    opacity: 0.25;
+  }
+  25% {
+    transform: scale(0.600);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(0.80);
+    opacity: 0.60;
+  }
+  75% {
+    transform: scale(1.15);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  #splash h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 392px) {
+  #splash h1 {
+    font-size: 30px;
+  }
 }
