@@ -80,7 +80,9 @@
   border-radius: 10px;
   margin: 10px;
   height: 0;
+  width: 100%;
   min-width: 250px;
+  max-width: 410px;
   overflow: hidden;
   transition: height 0.15s;
 }
