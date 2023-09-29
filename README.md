@@ -17,6 +17,7 @@ To get started, you'll need to clone the project repository into your desired di
 ## Dependency installation
 
 To install the necessary dependencies, run the following command:
+
 `npm install`
 
 ---
@@ -33,7 +34,9 @@ To make fictitious payments with PayPal, at the time of payment, we should press
 ## Starting the project
 
 To start the project, use the following command:
+
 `npm run start`
+
 This command will launch the project, and you can start using it as intended.
 
 ---

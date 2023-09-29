@@ -15,6 +15,7 @@ En primer lugar debe clonar el proyecto en el directorio que desee
 ## Instalación de dependencias
 
 Para instalar las dependencias necesarias, ejecuta el siguiente comando:
+
 `npm install`
 
 ---
@@ -31,7 +32,9 @@ Para realizar pagos ficticios con PayPal, al momento del pago, debemos presionar
 ## Iniciar el proyecto
 
 Para iniciar el proyecto, utiliza el siguiente comando:
+
 `npm run start`
+
 Este comando iniciará el proyecto, y podrás comenzar a utilizarla según lo previsto.
 
 ---
